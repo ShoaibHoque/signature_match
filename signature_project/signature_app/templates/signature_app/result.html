@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Match Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        img {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px 0;
+            max-width: 80%;
+        }
+
+        button {
+            background-color: #007bff; /* Blue */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Signature Match Result</h1>
+        <p><strong>Name:</strong> {{ signature.name }}</p>
+        <p><strong>Similarity:</strong> {{ similarity }}%</p>
+        <p>Original Image:</p>
+        <img src="{{ signature.original_image.url }}" alt="Original Image">
+        <p>Uploaded Image:</p>
+        <img src="{{ signature.uploaded_image.url }}" alt="Uploaded Image">
+        <br>
+        <a href="{% url 'upload_signature' %}"><button>Try Another</button></a>
+    </div>
+</body>
+</html>
