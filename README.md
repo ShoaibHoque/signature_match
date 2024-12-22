@@ -16,6 +16,16 @@ A Django-based web application for uploading and comparing signatures. This appl
 - **Image Processing:** OpenCV, scikit-image (SSIM)
 - **Database:** SQLite (default Django DB)
 
+## Screenshots
+### Upload Page
+<img src = "screenshots/upload.png" alt="Upload Page" width = "600">
+
+### Result Page with Similar Signature
+<img src = "screenshots/same_signature.png" alt="Same Signature Result" width = "600">
+
+### Result Page with Different Signature
+<img src = "screenshots/different_signature.png" alt="Different Signature Result" width = "600">
+
 ## Installation
 Follow these steps to run the project locally:
 
